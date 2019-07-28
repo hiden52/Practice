@@ -1,0 +1,4 @@
+﻿  MakeAPiano.cpp
+C:\Users\User\source\repos\hiden52\Practice\MakeAPiano\MakeAPiano\MakeAPiano.cpp(30,26): warning C4244:  'argument': conversion from 'double' to 'DWORD', possible loss of data
+C:\Users\User\source\repos\hiden52\Practice\MakeAPiano\MakeAPiano\MakeAPiano.cpp(46,11): warning C4244:  'initializing': conversion from 'std::streamoff' to 'int', possible loss of data
+  MakeAPiano.vcxproj -> C:\Users\User\source\repos\hiden52\Practice\MakeAPiano\Debug\MakeAPiano.exe
