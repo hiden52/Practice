@@ -18,5 +18,8 @@
     <ClCompile Include="Life_Income.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="last_main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

@@ -32,3 +32,5 @@
 *.app
 /.vs
 /MakeAPiano/.vs/BasicProgramming/v16
+/MakeAPiano/Release
+/MakeAPiano/Life_Income/Release

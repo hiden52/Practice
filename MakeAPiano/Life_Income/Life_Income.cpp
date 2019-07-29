@@ -1,45 +1,81 @@
 #include <iostream>
 #include <fstream>
+#include <cstdlib>
+#include <ctime>
 using namespace std;
+
+double getRndNum(const double min, const double max);
+
+double estimateIncome();
+
+double getAverageIncome(const int num_itr);
 
 int main()
 {
-	const int start_age = 28;
-	const int end_age = 120;
-	const double start_salary = 0.45;
-	const double salary_increase_rate = 0.03;
+	srand((unsigned int)time(NULL));
 
-	double annual_salary = start_salary;
-	double income_sum = 0;
-	double sum_salary = 0;
-
-	ofstream out_file("income.txt");
-
-	for (int age = start_age; age <= 54; age++, annual_salary *= (1.0 + salary_increase_rate))
+	// 누적연봉 14.0천만원이 넘는 케이스 출력
+	/*double est_income = 0;
+	for (int i = 0; i < 10000; ++i)
 	{
-		income_sum += annual_salary * 0.7;
-		sum_salary += annual_salary;
-		out_file << age << " " << annual_salary << " " << income_sum << endl;
-	}
+		est_income = estimateIncome();
+		if (est_income > 14.0)
+		{
+			cout << est_income << endl;
+			break;
+		}
+	}*/
 
-	annual_salary *= 0.5;
-
-	for (int age = 55; age <= 60; age++)
+	for (int i = 1; i < 100000; i *= 2)
 	{
-		income_sum += annual_salary * 0.7;
-		sum_salary += annual_salary;
-		out_file << age << " " << annual_salary << " " << income_sum << endl;;
+		cout << "Monte Carlo itr = " << i << ", Sum = " << getAverageIncome(i) << endl;
 	}
-
-	const double salary_average = sum_salary / (double)(60 - start_age + 1);
-	for (int age = 61; age < end_age; age++)
-	{
-		income_sum += salary_average;
-
-		out_file << age << " " << salary_average << " " << income_sum << endl;;
-	}
-
-	out_file.close();
 
 	return 0;
+}
+
+double getRndNum(const double min, const double max)
+{
+	double tmp = (double)rand() / (double)RAND_MAX;
+	
+	tmp = min + (max - min) * tmp;
+
+	return tmp;
+}
+
+double estimateIncome()
+{
+	ofstream of("annual_salary.txt");
+
+	double annual_salary = 0.3;
+	double income_sum = 0;
+
+	for (int age = 28; age < 55; age++)
+	{
+		income_sum += annual_salary;
+
+		of << annual_salary;
+		//const double salary_increase = 0.03;
+		const double salary_increase = getRndNum(0.0, 0.06);
+
+		annual_salary *= (1.0 + salary_increase);
+
+		of << " " << salary_increase << "\n";
+
+	}
+
+	of.close();
+
+	return income_sum;
+}
+
+double getAverageIncome(const int num_itr)
+{
+	double sum = 0;
+	for (int i = 0; i < num_itr; i++)
+	{
+		sum += estimateIncome();
+	}
+
+	return sum / (double)num_itr;
 }
