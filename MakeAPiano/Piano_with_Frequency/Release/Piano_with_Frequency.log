@@ -1,3 +1,7 @@
 ﻿  piano_with_Frequency.cpp
-piano_with_Frequency.obj : error LNK2001: unresolved external symbol __imp__PlaySoundW@12
-C:\Users\User\source\repos\hiden52\Practice\MakeAPiano\Release\Piano_with_Frequency.exe : fatal error LNK1120: 1 unresolved externals
+  Generating code
+  5 of 174 functions ( 2.9%) were compiled, the rest were copied from previous compilation.
+    1 functions were new in current compilation
+    19 functions had inline decision re-evaluated but remain unchanged
+  Finished generating code
+  Piano_with_Frequency.vcxproj -> C:\Users\User\source\repos\hiden52\Practice\MakeAPiano\Release\Piano_with_Frequency.exe
