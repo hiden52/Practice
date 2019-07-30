@@ -22,7 +22,7 @@ int main()
 
 	ofstream of("annual_salary.txt");
 
-	for (int age = start_age; age < retire_age; ++age;)
+	for (int age = start_age; age < retire_age; ++age)
 	{
 		cout << "Age = " << age << ", Annual salary = " << annual_salary << endl;
 		of << age << ", " << annual_salary << ", " << total_income << endl;
