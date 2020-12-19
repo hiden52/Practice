@@ -82,6 +82,36 @@ public:
         //cout << "Fraction() constructor" << endl;
     }
     
+    //  위임생성자 -> 생성자가 생성자를 가져다 쓰는 것. C++11부터 가능
+    Fraction(const int& den_in)
+        : Fraction(1, den_in)
+    {}
+    
+
+    // Constructor member Initialization list
+    class Something
+    {
+    private:
+        int     m_i = 2;
+        double  m_d = 3.2;
+        char    m_c = 'v';
+        int     m_arr[5] = {1,5,5,8,7};   //이니셜라이저 리스트가 우선
+
+    public:
+        Something()
+            : m_i{1}
+            , m_d{3.14}
+            , m_c{'a'}
+            , m_arr{1, 2, 3, 4, 5} 
+            //Initializer list
+        {
+            // 이니셜라이저 리스트 적용 후 실행
+            m_i *= 2;
+            m_d *= 3.2;
+            m_c += 3;
+            // 즉 최종적으로 위의 값이 적용됨
+        }
+    };
 
     void print()
     {
