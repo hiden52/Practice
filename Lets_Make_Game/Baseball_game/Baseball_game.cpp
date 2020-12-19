@@ -25,7 +25,9 @@ int main()
 
 		int answer[num_answer];
 		for (int i = 0; i < num_answer; ++i)
+		{
 			answer[i] = numbers[i];
+		}
 
 		bool isWin = false;
 
@@ -35,13 +37,21 @@ int main()
 			//  pitch a ball
 			int pitching[num_answer] = { 0 };
 			for (int i = 0; i < num_answer; ++i)
+			{
 				cin >> pitching[i];
+			}
 			
 			quit = quitGame(pitching, num_answer);
-			if (quit) break;
+			if (quit) 
+			{
+				break;
+			}
 
 			bool correctNum = checkNumber(pitching);
-			if (!correctNum) continue;
+			if (!correctNum) 
+			{
+				continue;
+			}
 
 			//  hit or out ? JUDGE!
 			isWin = judgeAnswer(pitching, answer, num_answer);
@@ -88,15 +98,29 @@ bool judgeAnswer(const int* pitching, const int* answer, const int& num_answer)
 			}
 		}
 	}
-	if (strike == 3) { cout << "You win!! \n"; return true; }
-	else if (ball > 0 || strike > 0) { cout << strike << " Strikes, " << ball << " balls\nTry again.\n"; return false; }
-	else { cout << "Hit!! \nTry again.\n"; return false; }
+	if (strike == 3) 
+	{ 
+		cout << "You win!! " << endl;; 
+		return true; 
+	}
+	else if (ball > 0 || strike > 0) 
+	{ 
+		cout << strike << " Strikes, " << ball << " balls\nTry again.\n"; 
+		return false; 
+	}
+	else 
+	{ 
+		cout << "Hit!! \nTry again." << endl;;
+		return false;
+	}
 }
 
 bool quitGame(const int* pitching, const int& num_answer)
 {
 	for (int i = 0; i < num_answer; ++i)
+	{
 		if (pitching[i] == 0) return true;   // true means quit this game
+	}
 	return false;
 }
 
@@ -113,5 +137,7 @@ bool checkNumber(const int* arr)
 		return false;
 	}
 	else
+	{
 		return true;
+	}
 }
