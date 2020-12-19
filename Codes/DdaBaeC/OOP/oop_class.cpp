@@ -87,6 +87,11 @@ public:
         : Fraction(1, den_in)
     {}
     
+    //  Destructor
+    ~Fraction() // Dynamic Allocation의 경우 delete 해줘야 Destructor가 작동
+    {
+        cout << "Destructor" << endl;
+    }
 
     // Constructor member Initialization list
     class Something
@@ -119,6 +124,36 @@ public:
     }
 };
 
+//  Destructor
+class IntArray
+{
+private:
+    int *m_arr = nullptr;
+    int m_length = 0;
+
+public:
+    IntArray(const int length_in)
+    {
+        m_length = length_in;
+        m_arr = new int[m_length];
+        cout << "Constructor " << endl;
+    }
+    
+    ~IntArray()
+    {
+        if(m_arr != nullptr)
+        {
+            delete[] m_arr;
+            cout << "Destructor" << endl;
+        }
+    }
+
+    int size()
+    {
+        return m_length;
+    }
+};
+
 
 int main ()
 {
@@ -141,6 +176,11 @@ int main ()
 
     Fraction frac;      //  parameter가 없는 생성자는 ()를 생략
     frac.print();
+
+    while(1)
+    {
+        IntArray(1000);
+    }
 
     return 0;
 }
