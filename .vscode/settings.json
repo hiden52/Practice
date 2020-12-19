@@ -18,6 +18,11 @@
         "iostream": "cpp",
         "*.tcc": "cpp",
         "ostream": "cpp",
-        "cstdarg": "cpp"
+        "cstdarg": "cpp",
+        "numeric": "cpp",
+        "fstream": "cpp",
+        "istream": "cpp",
+        "system_error": "cpp",
+        "typeinfo": "cpp"
     }
    } 
