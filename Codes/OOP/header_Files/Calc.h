@@ -1,7 +1,6 @@
 #pragma once
 
 #include <iostream>
-
     
 
 class Calc
@@ -15,7 +14,5 @@ public:
     Calc& add (int value);
     Calc& sub (int value);
     Calc& mult (int value);
-    void print();
+    void print() const;
 };
-
-    

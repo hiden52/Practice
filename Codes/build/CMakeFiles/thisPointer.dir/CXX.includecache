@@ -1,0 +1,22 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/codespace/workspace/Practice/Codes/OOP/Calc.cpp
+header_Files/Calc.h
+/home/codespace/workspace/Practice/Codes/OOP/header_Files/Calc.h
+
+/home/codespace/workspace/Practice/Codes/OOP/header_Files/Calc.h
+iostream
+-
+
+/home/codespace/workspace/Practice/Codes/OOP/thisPointer.cpp
+iostream
+-
+header_Files/Calc.h
+/home/codespace/workspace/Practice/Codes/OOP/header_Files/Calc.h
+

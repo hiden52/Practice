@@ -1,0 +1,1 @@
+g++   -g   CMakeFiles/thisPointer.dir/thisPointer.cpp.o CMakeFiles/thisPointer.dir/Calc.cpp.o  -o thisPointer -rdynamic 

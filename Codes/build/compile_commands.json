@@ -1,0 +1,12 @@
+[
+{
+  "directory": "/home/codespace/workspace/Practice/Codes/build",
+  "command": "g++     -g   -o CMakeFiles/thisPointer.dir/thisPointer.cpp.o -c /home/codespace/workspace/Practice/Codes/OOP/thisPointer.cpp",
+  "file": "/home/codespace/workspace/Practice/Codes/OOP/thisPointer.cpp"
+},
+{
+  "directory": "/home/codespace/workspace/Practice/Codes/build",
+  "command": "g++     -g   -o CMakeFiles/thisPointer.dir/Calc.cpp.o -c /home/codespace/workspace/Practice/Codes/OOP/Calc.cpp",
+  "file": "/home/codespace/workspace/Practice/Codes/OOP/Calc.cpp"
+}
+]
