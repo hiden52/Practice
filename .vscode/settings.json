@@ -23,6 +23,8 @@
         "fstream": "cpp",
         "istream": "cpp",
         "system_error": "cpp",
-        "typeinfo": "cpp"
+        "typeinfo": "cpp",
+        "functional": "cpp",
+        "streambuf": "cpp"
     }
    } 
