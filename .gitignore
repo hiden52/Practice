@@ -60,3 +60,15 @@
 /Let's_Make_Game/Baseball_game/Baseball_game.vcxproj.user
 /Let's_Make_Game/Baseball_game/Baseball_game.vcxproj.filters
 /Let's_Make_Game/Baseball_game/Baseball_game.vcxproj
+
+#CMake
+/CMakeCache.txt
+/cmake_install.cmake
+/CMakeFiles/
+/Makefile
+/Codes/OOP/CMakeFiles
+/Codes/OOP/CMakeCache.txt
+/Codes/OOP/build/CMakeFiles
+/Codes/OOP/build/CMakeCache.txt
+/Codes/OOP/build/cmake_install.cmake
+/Codes/OOP/build/Makefile
