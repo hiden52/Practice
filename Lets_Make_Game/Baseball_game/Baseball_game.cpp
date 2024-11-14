@@ -3,7 +3,7 @@
 #include <ctime>
 using namespace std;
 
-void suffleArr(int* arr, const int& length);
+void shuffleArr(int* arr, const int& length);
 bool quitGame(const int* pitching, const int& num_answer);
 bool judgeAnswer(const int* pitching, const int* answer, const int& num_answer);
 bool checkNumber(const int* arr);
@@ -21,7 +21,7 @@ int main()
 			numbers[i] = i + 1;
 		}
 
-		suffleArr(numbers, 9);
+		shuffleArr(numbers, 9);
 
 		int answer[num_answer];
 		for (int i = 0; i < num_answer; ++i)
@@ -62,7 +62,7 @@ int main()
 	return 0;
 }
 
-void suffleArr(int* arr, const int& length)
+void shuffleArr(int* arr, const int& length)
 {
 	srand((unsigned int)time(NULL));
 
